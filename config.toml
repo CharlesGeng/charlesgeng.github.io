@@ -1,0 +1,24 @@
+baseURL = "http://charlesgeng.github.io/"
+languageCode = "zh-cn"
+title = "Charles Geng's Web"
+theme = "mainroad"
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "right"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  # alternatively "ddg-search" can be used, to search via DuckDuckGo
+  # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+
+
+[Params.widgets.social]
+  # Enable parts of social widget
+  linkedin = "gengqi"
+  github = "charlesgeng"
+
+[[Params.widgets.social.custom]]
+  title = "LeetCode"
+  url = "https://LeetCode.com/CharlesGeng"
+  icon = "leetcode.svg"  # Optional. Path relative to "layouts/partials"
