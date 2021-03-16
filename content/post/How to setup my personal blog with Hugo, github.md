@@ -1,7 +1,7 @@
 ---
 title: "How to Setup My Personal Blog With Hugo, Github"
 date: 2021-03-16T10:33:24+09:00
-draft: true
+draft: false
 tags: 
   - IT
   - HUGO
@@ -38,3 +38,15 @@ git checkout origin/master -ft
 git submodule add https://github.com/vimux/mainroad
 
 ```
+
+- Setup **config.toml** file of the site
+  - Enable Sidebar
+  - Enable Main Menu
+  - Enable Social Links
+
+## Deploy the site
+
+- commit and push the code to github
+- Goto the **actions** of the repository, create a new workflow based on the documentation [here](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+
+**DONE!**

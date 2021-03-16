@@ -3,6 +3,9 @@ languageCode = "zh-cn"
 title = "Charles Geng's Web"
 theme = "mainroad"
 
+[Params]
+toc = true
+
 [Params.sidebar]
   home = "right" # Configure layout for home page
   list = "right"  # Configure layout for list pages
@@ -11,6 +14,10 @@ theme = "mainroad"
   widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
   # alternatively "ddg-search" can be used, to search via DuckDuckGo
   # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets]
+  recent_num = 5
+
 
 
 [Params.widgets.social]
@@ -22,3 +29,19 @@ theme = "mainroad"
   title = "LeetCode"
   url = "https://LeetCode.com/CharlesGeng"
   icon = "leetcode.svg"  # Optional. Path relative to "layouts/partials"
+
+
+[menu]
+  [[menu.main]]
+    name = "blog"
+    pre = "<i class='fa fa-road'></i>"
+    url = "/post/"
+    weight = -100
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "/about/about"
+    weight = -110
+
