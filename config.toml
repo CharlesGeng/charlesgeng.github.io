@@ -3,8 +3,14 @@ languageCode = "zh-cn"
 title = "Charles Geng's Web"
 theme = "mainroad"
 
+[Author] # Used in authorbox
+  name = "Charles Geng"
+  bio = "This is not a technology only. 这不仅仅是一个技术博客。"
+
+
 [Params]
 toc = true
+authorbox = true
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
@@ -38,11 +44,3 @@ toc = true
     pre = "<i class='fa fa-road'></i>"
     url = "/post/"
     weight = -100
-
-  [[menu.main]]
-    identifier = "about"
-    name = "about"
-    pre = "<i class='fa fa-heart'></i>"
-    url = "/about/about"
-    weight = -110
-

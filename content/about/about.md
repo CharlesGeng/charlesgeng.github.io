@@ -3,6 +3,8 @@ title: "About Me"
 date: 2021-03-16T13:10:52+09:00
 draft: false
 toc: false
+menu: main
+authorbox: false
 ---
 
 
