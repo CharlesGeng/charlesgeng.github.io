@@ -8,10 +8,10 @@ authorbox: false
 ---
 
 
-### Hi There. I am Charles, 耿 琪 in Chinese.
+### Hi There. I am Charles, 耿 琪 in Chinese
 
-### I am a software developer from China.
+### I am a software developer from China
 
-### Currently, I am living in Japan with my family. 
+### Currently, I am living in Japan with my family
 
 ### You can find me in [LinkedIn](https://linkedin.com/in/gengqi), [Github](https://github.com/charlesgeng) or [LeetCode](https://www.leetcode.com/CharlesGeng)
