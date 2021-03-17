@@ -17,6 +17,7 @@ toc = true
 
 [Params.widgets]
   recent_num = 5
+  tags_counter = true
 
 
 
