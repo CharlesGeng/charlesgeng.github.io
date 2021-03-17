@@ -3,9 +3,10 @@ title: "React Self Study"
 date: 2021-03-17T10:23:53+09:00
 draft: false
 tags:
-  - IT
   - REACT
   - FRONT-END
+categories: 
+  - IT
 ---
 
 ## Book **Pro React 16**

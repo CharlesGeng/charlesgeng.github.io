@@ -3,8 +3,9 @@ title: "How to Setup My Personal Blog With Hugo, Github"
 date: 2021-03-16T10:33:24+09:00
 draft: false
 tags: 
-  - IT
   - HUGO
+categories: 
+  - IT
 ---
 
 ## Install Hugo on your PC
