@@ -6,7 +6,7 @@ disqusShortname = "charlesgeng-github-io" # Enable Disqus comments by entering y
 
 [Author] # Used in authorbox
   name = "Charles Geng"
-  bio = "This is not a technology only. 这不仅仅是一个技术博客。"
+  bio = "This is not a technology blog only. 这不仅仅是一个技术博客。"
 
 
 [Params]
