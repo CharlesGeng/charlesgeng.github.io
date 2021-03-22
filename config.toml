@@ -2,6 +2,7 @@ baseURL = "http://charlesgeng.github.io/"
 languageCode = "zh-cn"
 title = "Charles Geng's Web"
 theme = "mainroad"
+disqusShortname = "charlesgeng-github-io" # Enable Disqus comments by entering your Disqus shortname
 
 [Author] # Used in authorbox
   name = "Charles Geng"
