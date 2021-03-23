@@ -145,4 +145,4 @@ foo = () => {
 
 - **Preventing Default Behavior**
 
-- Some events have behavior that the browser performs by default. The **preventDefault** method can be called on event objects to prevent the default behavior.
+> Some events have behavior that the browser performs by default. The **preventDefault** method can be called on event objects to prevent the default behavior.
