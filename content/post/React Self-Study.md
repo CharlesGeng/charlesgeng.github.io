@@ -146,3 +146,23 @@ foo = () => {
 - **Preventing Default Behavior**
 
 > Some events have behavior that the browser performs by default. The **preventDefault** method can be called on event objects to prevent the default behavior.
+
+- **Target Phase and Bubble Phase**
+  
+> When an event is first triggered, it enters the target phase, where event handlers applied to the element that is the source of the event are invoked. Once those event handlers are complete, the event enters the bubble phase, where the event works its way up the chain of ancestor elements and is used to invoke any handlers that have been applied for that type of event. 
+
+![The target and bubble phases of the event](/img/TargetPhaseAndBubblePhase.png)
+
+- **Capture Phase**
+
+> The capture phase provides an opportunity for elements to process events before the target phase. During the capture phase, the browser starts with the body element and works its way down the hierarchy of elements toward the target, following the opposite path to the bubble phase, and gives each element the chance to process the event.
+
+![Capture Phase](/img/CapturePhase.png)
+
+- **Stopping Event Propagation**
+
+> Understanding event phases can also be important if you want to disrupt the normal propagation sequence and prevent elements from receiving events. 
+
+```jsx
+event.stopPropagation();
+```
