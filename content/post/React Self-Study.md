@@ -69,7 +69,7 @@ export default class statefulComponent extends Component {
 
 - **Events**
 
-> Events are handled using properties that share the name of the corresponding DOM API property, expressed in camel case. The DOM API onclick property is expressed as onClick in React applications and specifies how to handle the click event, which is triggered when the user clicks an element. 
+> Events are handled using properties that share the name of the corresponding DOM API property, expressed in camel case. The DOM API onclick property is expressed as onClick in React applications and specifies how to handle the click event, which is triggered when the user clicks an element.
 
 - **AVOIDING THE EVENT FUNCTION INVOCATION PITFALLS**
 
@@ -149,7 +149,7 @@ foo = () => {
 
 - **Target Phase and Bubble Phase**
   
-> When an event is first triggered, it enters the target phase, where event handlers applied to the element that is the source of the event are invoked. Once those event handlers are complete, the event enters the bubble phase, where the event works its way up the chain of ancestor elements and is used to invoke any handlers that have been applied for that type of event. 
+> When an event is first triggered, it enters the target phase, where event handlers applied to the element that is the source of the event are invoked. Once those event handlers are complete, the event enters the bubble phase, where the event works its way up the chain of ancestor elements and is used to invoke any handlers that have been applied for that type of event.
 
 ![The target and bubble phases of the event](/img/TargetPhaseAndBubblePhase.png)
 
@@ -161,8 +161,35 @@ foo = () => {
 
 - **Stopping Event Propagation**
 
-> Understanding event phases can also be important if you want to disrupt the normal propagation sequence and prevent elements from receiving events. 
+> Understanding event phases can also be important if you want to disrupt the normal propagation sequence and prevent elements from receiving events.
 
 ```jsx
 event.stopPropagation();
 ```
+
+## Chapter 13 Reconciliation and Lifecycles
+
+- Understanding the Update Process
+
+>When the application first starts, React asks all the components to render their content so that it can be displayed to the user. Once the content is displayed, the application is in the **reconciled state**, where the content displayed to the user is consistent with the state of the components.
+
+>The **setState** method updates a component’s state data, but it also marks the component as **“stale”**, meaning that the HTML content displayed to the user may be out-of-date.
+
+- Understanding the Update Processing
+
+> Making changes to the HTML elements in the Domain Object Model is an expensive operation and so React compares the content returned by the components with the previous results so that it can ask the browser to perform the smallest number of operations, a process known as reconciliation.
+
+- How to manipulate an HTML Element in Chrome Console
+
+```jsx
+// IN COMPONENT DEFINATION, ADD ID PROPERTY
+<div id="messageDiv" className="h5 text-center p-2">
+
+//In chrome Console run the command below. 
+//Change the background color of the div element.
+document.getElementById("messageDiv").classList.add("bg-info")
+```
+
+- To ensure that React is able to minimize the number of changes it has to make to display a change, elements generated from arrays are required to have a **key** prop, such as the one defined by the List component.
+
+- React provides the **forceUpdate** method, which can be used to explicitly trigger an update and ensures that any changes are reflected in the content presented to the user. 
