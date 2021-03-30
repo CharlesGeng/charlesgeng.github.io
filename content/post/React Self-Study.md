@@ -173,7 +173,7 @@ event.stopPropagation();
 
 >When the application first starts, React asks all the components to render their content so that it can be displayed to the user. Once the content is displayed, the application is in the **reconciled state**, where the content displayed to the user is consistent with the state of the components.
 
->The **setState** method updates a component’s state data, but it also marks the component as **“stale”**, meaning that the HTML content displayed to the user may be out-of-date.
+>The **setState** method updates a component’s state data, but it also marks the component as **stale**, meaning that the HTML content displayed to the user may be out-of-date.
 
 - Understanding the Update Processing
 
@@ -182,14 +182,35 @@ event.stopPropagation();
 - How to manipulate an HTML Element in Chrome Console
 
 ```jsx
-// IN COMPONENT DEFINATION, ADD ID PROPERTY
+// IN COMPONENT definition, ADD ID PROPERTY
 <div id="messageDiv" className="h5 text-center p-2">
 
-//In chrome Console run the command below. 
+//In the chrome console run the command below. 
 //Change the background color of the div element.
 document.getElementById("messageDiv").classList.add("bg-info")
 ```
 
 - To ensure that React is able to minimize the number of changes it has to make to display a change, elements generated from arrays are required to have a **key** prop, such as the one defined by the List component.
+- React provides the **forceUpdate** method, which can be used to explicitly trigger an update and ensures that any changes are reflected in the content presented to the user.
+- The process by which React creates a component and renders its content for the first time is called **mounting**
+- React creates a new component object and goes through the mounting process, calling each of the methods in turn: **constructor**, **render**, and **componentDidMount**.
+- Update Phase: **Render()** => **componentDidUpdate()**. After the component is mounted, the componentDidUpdate method will be called each time the component is updated.
+- When a component is about to be destroyed, React will call the componentWillUnmount method, which provides components with the opportunity to release resources, close network connections, and stop any asynchronous tasks.
 
-- React provides the **forceUpdate** method, which can be used to explicitly trigger an update and ensures that any changes are reflected in the content presented to the user. 
+- **shouldComponentUpdate**: This method allows a component to indicate that it does not need to be updated.
+- The arguments to the **shouldComponentUpdate** method are new props and state objects that can be inspected and compared to the existing values.
+```jsx
+shouldComponentUpdate(newProps, newState) {
+  ...
+  return boolean result;
+}
+```
+
+- **getDerivedStateFromProps**: This method allows a component to set its state data values based on the props it receives.
+- The getDerivedStateFromProps method is static, which means that it is unable to access any of the instance methods or properties via the this keyword. Instead, the method receives a props object, which contains the props values provided by the parent component, and a state object, which represents the current state data. The getDerivedStateFromProps method returns a new state data object that is derived from the prop data.
+
+```jsx
+static shouldComponentUpdate(newProps, newState) {
+  return new state
+}
+```
