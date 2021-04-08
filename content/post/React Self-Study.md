@@ -14,6 +14,10 @@ categories:
 - ISBN: 978-1-4842-4450-0
 - [homepage](https://www.apress.com/gp/book/9781484244500)
 
+## TODO LIST
+
+- [ ] TODO: Chapter 13. Know more about **componentWillUnmount**. How to close network connections, how to stop any asynchronous tasks.
+
 ## Chapter 09
 
 - to be updated
@@ -194,11 +198,12 @@ document.getElementById("messageDiv").classList.add("bg-info")
 - React provides the **forceUpdate** method, which can be used to explicitly trigger an update and ensures that any changes are reflected in the content presented to the user.
 - The process by which React creates a component and renders its content for the first time is called **mounting**
 - React creates a new component object and goes through the mounting process, calling each of the methods in turn: **constructor**, **render**, and **componentDidMount**.
-- Update Phase: **Render()** => **componentDidUpdate()**. After the component is mounted, the componentDidUpdate method will be called each time the component is updated.
-- When a component is about to be destroyed, React will call the componentWillUnmount method, which provides components with the opportunity to release resources, close network connections, and stop any asynchronous tasks.
+- Update Phase: **Render()** -> **componentDidUpdate()**. After the component is mounted, the componentDidUpdate method will be called each time the component is updated.
+- When a component is about to be destroyed, React will call the **componentWillUnmount** method, which provides components with the opportunity to release resources, close network connections, and stop any asynchronous tasks.
 
 - **shouldComponentUpdate**: This method allows a component to indicate that it does not need to be updated.
 - The arguments to the **shouldComponentUpdate** method are new props and state objects that can be inspected and compared to the existing values.
+
 ```jsx
 shouldComponentUpdate(newProps, newState) {
   ...
@@ -207,10 +212,78 @@ shouldComponentUpdate(newProps, newState) {
 ```
 
 - **getDerivedStateFromProps**: This method allows a component to set its state data values based on the props it receives.
-- The getDerivedStateFromProps method is static, which means that it is unable to access any of the instance methods or properties via the this keyword. Instead, the method receives a props object, which contains the props values provided by the parent component, and a state object, which represents the current state data. The getDerivedStateFromProps method returns a new state data object that is derived from the prop data.
+> The **getDerivedStateFromProps** method is **static**, which means that it is unable to access any of the instance methods or properties via the **this** keyword. Instead, the method receives a props object, which contains the props values provided by the parent component, and a state object, which represents the current state data. The getDerivedStateFromProps method returns a new state data object that is derived from the prop data.
 
 ```jsx
 static shouldComponentUpdate(newProps, newState) {
   return new state
 }
+```
+
+## Chapter 14 COMPOSING APPLICATIONS
+
+- Using the Children Prop
+
+> React provides a special **children** prop that is used when a component needs to display content provided by its parent but doesn’t know what that content will be in advance. This is a useful way of reducing duplication by standardizing features in a container that can be reused across an application.
+
+| Function               | Comment                                                                                             |
+| :--------------------- | :-------------------------------------------------------------------------------------------------- |
+| React.Children.map     | This method invokes a function for each child and returns an array of the function results.         |
+| React.Children.forEach | This method invokes a function for each child without returning an array.                           |
+| React.Children.count   | This method returns the number of children.                                                         |
+| React.Children.only    | This method throws an array if the collection of children it receives contains more than one child. |
+| React.Children.toArray | This method returns an array of children, which can be used to reorder or remove elements.          |
+| React.cloneElement     | This method is used to duplicate a child element and allows new props to be added by the container. |
+
+- Adding Props to Container Children
+
+> Use **React.Children.map** and **React.cloneElement**
+
+```jsx
+let modChildren = React.Children.map(
+                    this.props.children, 
+                    (child => React.cloneElement(child, 
+                      {newProp: val})));
+```
+
+- Createting a Specialized Component
+
+> Some components provide specialized versions of the features provided by another, more general, component. React relies on the specialized component rendering the more general component and managing its behavior with props.
+
+- Creating Higher-Order Components
+
+> **Higher-order components (HOCs)** provide an alternative to specialized components and are useful when components require common code but may not render related content. HOCs are often used for **_cross-cutting concerns_**, a term that refers to tasks that span the entire application and would otherwise lead to the same features being implemented in several places. Because HOCs are functions, you can define additional arguments to configure behavior.
+
+```jsx
+export default function Foo(wrappedComponent){
+  return(
+    <NewComponent />
+  )
+}
+```
+
+- Using Render props
+
+> A render prop is a function prop that provides a component with the content it should render, providing an alternative model of wrapping one component in another.
+
+```jsx
+export default class RenderProps extends Component {
+  render(){
+    ...
+    this.props.render()
+    ...
+  }
+
+class APP extends Component {
+
+  render(){
+    ...
+    <div>
+      <RenderProps render={() => <SortedList data={this.Names} />} />
+    </div>
+    ...
+  }
+ 
+}
+
 ```
