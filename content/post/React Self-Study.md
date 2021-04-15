@@ -226,6 +226,16 @@ static shouldComponentUpdate(newProps, newState) {
 
 > React provides a special **children** prop that is used when a component needs to display content provided by its parent but doesn’t know what that content will be in advance. This is a useful way of reducing duplication by standardizing features in a container that can be reused across an application.
 
+```jsx
+render(){
+  return
+  <div>
+  // Container elements
+  {this.props.children}// Used to show children components
+  </div>
+}
+```
+
 | Function               | Comment                                                                                             |
 | :--------------------- | :-------------------------------------------------------------------------------------------------- |
 | React.Children.map     | This method invokes a function for each child and returns an array of the function results.         |
@@ -249,6 +259,26 @@ let modChildren = React.Children.map(
 - Createting a Specialized Component
 
 > Some components provide specialized versions of the features provided by another, more general, component. React relies on the specialized component rendering the more general component and managing its behavior with props.
+
+```jsx
+export class GeneralList extends Component{
+  //Show item of an array
+}
+
+
+export class SortedList extends Component{
+  handleSorted = () => {
+    this.state.dataList.sorted();
+    ...
+  }
+  render(){
+    <div>
+      <GeneralList list={this.state.dataList}>
+      <button onClick={this.handleSorted}>Sort List </button>
+    </div>
+  }
+}
+```
 
 - Creating Higher-Order Components
 
@@ -287,3 +317,43 @@ class APP extends Component {
 }
 
 ```
+
+- **prop drilling** or **prop threading**, where data values are passed through the component hierarchy to reach the point where they can be used. 
+
+- Using Context For Global Data
+
+1. Step 1: Define the Context
+
+```jsx
+export const SomeContext = React.createContext({
+  prop1: prop2Value,
+  prop2: prop2Value,
+  func: () => {}
+});
+```
+
+2. Step 2: Context Consumer
+
+```jsx
+...
+  return <SomeContext.Consumer>
+  {contextData => 
+    //...context can be consumed here...
+  }
+  <SomeContext.Consumer>
+...
+```
+
+3. Step 3: Context Provider
+
+```jsx
+<SomeContext.Provider value ={this.state.SomeContextData}>
+  //Component that use the context
+</SomeContext.Provider>
+
+```
+
+- Error Boundaries
+
+> The **componentDidCatch** method receives the error object thrown by the problem component and an additional information object that provides the component’s stack trace, which can be useful for logging.
+
