@@ -77,13 +77,13 @@ export default class statefulComponent extends Component {
 
 - **AVOIDING THE EVENT FUNCTION INVOCATION PITFALLS**
 
-1. :warning: The first **mistake** is to enclose the function you require in quotes rather than braces. This provides react with a string value instead of a function and produces an error in the browser’s Javascript console.
+- :warning: The first **mistake** is to enclose the function you require in quotes rather than braces. This provides react with a string value instead of a function and produces an error in the browser’s Javascript console.
 
 ```jsx
 <button className="btn btn-primary" onClick="this.handleEvent" >
 ```
 
-2. :warning: The other common mistake is to use an expression that invokes the function you require. This expression results in react invoking the handleEvent method when the component object is created and not when an event is triggered. You won’t receive an error or warning for this mistake, which makes the problem harder to spot.
+- :warning: The other common mistake is to use an expression that invokes the function you require. This expression results in react invoking the handleEvent method when the component object is created and not when an event is triggered. You won’t receive an error or warning for this mistake, which makes the problem harder to spot.
 
 ```jsx
 <button className="btn btn-primary" onClick={ this.handleEvent() } >
@@ -176,7 +176,6 @@ event.stopPropagation();
 - Understanding the Update Process
 
 >When the application first starts, React asks all the components to render their content so that it can be displayed to the user. Once the content is displayed, the application is in the **reconciled state**, where the content displayed to the user is consistent with the state of the components.
-
 >The **setState** method updates a component’s state data, but it also marks the component as **stale**, meaning that the HTML content displayed to the user may be out-of-date.
 
 - Understanding the Update Processing
@@ -212,6 +211,7 @@ shouldComponentUpdate(newProps, newState) {
 ```
 
 - **getDerivedStateFromProps**: This method allows a component to set its state data values based on the props it receives.
+
 > The **getDerivedStateFromProps** method is **static**, which means that it is unable to access any of the instance methods or properties via the **this** keyword. Instead, the method receives a props object, which contains the props values provided by the parent component, and a state object, which represents the current state data. The getDerivedStateFromProps method returns a new state data object that is derived from the prop data.
 
 ```jsx
@@ -318,11 +318,11 @@ class APP extends Component {
 
 ```
 
-- **prop drilling** or **prop threading**, where data values are passed through the component hierarchy to reach the point where they can be used. 
+- **prop drilling** or **prop threading**, where data values are passed through the component hierarchy to reach the point where they can be used.
 
 - Using Context For Global Data
 
-1. Step 1: Define the Context
+- Step 1: Define the Context
 
 ```jsx
 export const SomeContext = React.createContext({
@@ -332,7 +332,7 @@ export const SomeContext = React.createContext({
 });
 ```
 
-2. Step 2: Context Consumer
+- Step 2: Context Consumer
 
 ```jsx
 ...
@@ -344,7 +344,7 @@ export const SomeContext = React.createContext({
 ...
 ```
 
-3. Step 3: Context Provider
+- Step 3: Context Provider
 
 ```jsx
 <SomeContext.Provider value ={this.state.SomeContextData}>
@@ -356,4 +356,61 @@ export const SomeContext = React.createContext({
 - Error Boundaries
 
 > The **componentDidCatch** method receives the error object thrown by the problem component and an additional information object that provides the component’s stack trace, which can be useful for logging.
+
+## Chapter 15 Forms and Validation
+
+- The **Object.keys()** method returns an array of a given object's own enumerable property **names**, iterated in the same order that a normal loop would.
+- The contents of the square brackets (the [ and ] characters) are evaluated to get the property name for the state update, which allows me to use the name property from the event.
+
+```jsx
+...
+updateFormValue = (event) => {
+this.setState({ [event.target.name]: event.target.value },
+() => this.props.submit(this.state));
+}
+...
+```
+
+- Using **select** elements that present **multiple items**
+  - Element defination:
+
+  ```jsx
+  <select className="form-control" multiple={true} name="toppings"
+  value={ this.state.toppings } onChange={ this.updateFormValueOptions }>
+  ```
+
+  - Event Handler:
+
+  ```jsx
+  ...
+  updateFormValueOptions = (event) => {
+  <!-- Generate value list in array format -->
+  let options = [...event.target.options]
+  .filter(o => o.selected).map(o => o.value);
+  this.setState({ [event.target.name]: options },
+  () => this.props.submit(this.state));}
+  ...
+  ```
+
+- Using **Radio** Buttons. Radio buttons allow the user to select a single value from a list of options.
+
+```jsx
+  <div className="form-group">
+    <label>Ice Cream Flavors</label>
+    { this.flavors.map(flavor =>
+    <div className="form-check" key={ flavor }>
+      <input className="form-check-input"
+        type="radio" name="flavor"
+        value={ flavor }
+        checked={ this.state.flavor === flavor }
+        onChange={ this.updateFormValue } />
+      <label className="form-check-label">
+        { flavor }
+      </label>
+    </div>
+  )}
+  </div>
+```
+
+- Using **Checkbox**. The **checked** property has been used to determine whether the user has checked or unchecked the element.
 
