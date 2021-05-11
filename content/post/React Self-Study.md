@@ -413,4 +413,40 @@ this.setState({ [event.target.name]: event.target.value },
 ```
 
 - Using **Checkbox**. The **checked** property has been used to determine whether the user has checked or unchecked the element.
+- Using Checkboxes to Populate an Array:
+> **Array.prototype.splice()**: The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+```js
+// Syntax
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2, itemN)
+```
 
+```jsx
+...
+handleCheckboxChange = (event) => {
+    if (event.target.checked) {
+      this.state.toppingC.push(event.target.value)
+      this.setState({ "toppingC": this.state.toppingC },
+        () => { this.props.submit(this.state) });
+    }
+    else {
+      let index = this.state.toppingC.indexOf(event.target.value)
+      this.state.toppingC.splice(index, 1);
+      this.setState({ "toppingC": this.state.toppingC },
+        () => { this.props.submit(this.state) });
+    }
+  }
+...
+<div className="form-group">
+  <label>Ice Cream Toppings</label>
+  {this.toppings.map(t =>
+    <div className="form-check text-left" key={t}>
+      <input className="form-check-input" type='checkbox' value={t} name="toppingC" id={t} onChange={this.handleCheckboxChange} />
+      <label className="form-check-label" htmlFor={t}>{t}</label>
+    </div>
+  )}
+</div>
+...
+```
