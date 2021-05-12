@@ -414,7 +414,9 @@ this.setState({ [event.target.name]: event.target.value },
 
 - Using **Checkbox**. The **checked** property has been used to determine whether the user has checked or unchecked the element.
 - Using Checkboxes to Populate an Array:
+
 > **Array.prototype.splice()**: The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
 ```js
 // Syntax
 splice(start)
