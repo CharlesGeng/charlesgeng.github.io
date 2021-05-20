@@ -1,5 +1,5 @@
 ---
-title: "The Road To Learn React"
+title: "The Road To React"
 date: 2021-05-11T14:05:40+09:00
 draft: false
 tags: 
@@ -8,6 +8,10 @@ tags:
 categories: 
   - IT
 ---
+
+**TODO**:
+
+- [ ] page 25. Consider how we can include a React application in an external web application that uses HTML.
 
 ### Hoisting
 
@@ -94,3 +98,12 @@ params => ({foo: "a"}) // returning the object {foo: "a"}
 ([a, b] = [10, 20]) => a + b;  // result is 30
 ({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30
 ```
+
+### React jsx
+
+- [Official Doc](https://zh-hans.reactjs.org/docs/introducing-jsx.html)
+- Array.prototype.reduce() [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+> The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+
+- [SyntheticEvent](https://reactjs.org/docs/events.html#gatsby-focus-wrapper)
