@@ -107,3 +107,89 @@ params => ({foo: "a"}) // returning the object {foo: "a"}
 > The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
 - [SyntheticEvent](https://reactjs.org/docs/events.html#gatsby-focus-wrapper)
+
+### UNCONTROLLED VS. CONTROLLED COMPONENT
+
+[link](https://www.robinwieruch.de/react-controlled-components)
+
+1. Uncontrolled Component
+
+  ```jsx
+  import React, { useState } from 'react';
+ 
+  const App = () => {
+    const [value, setValue] = useState('Hello React');
+    
+      const handleChange = event => setValue(event.target.value);
+    
+      return (
+        <div>
+          <label>
+            My still uncontrolled Input:
+            <input type="text" onChange={handleChange} />
+          </label>
+    
+          <p>
+            <strong>Output:</strong> {value}
+          </p>
+        </div>
+      );
+    };
+    export default App;
+  ```
+
+- **input** field receives its value from internal DOM node state
+- **output** paragraph receives its value from React's state
+
+2. Controlled Component. By giving the input the value from React's state, it doesn't use anymore its internal state, but the state you provided from React.
+
+```jsx
+import React, { useState } from 'react';
+ 
+const App = () => {
+  const [value, setValue] = useState('Hello React');
+ 
+  const handleChange = event => setValue(event.target.value);
+ 
+  return (
+    <div>
+      <label>
+        My controlled Input:
+        <input type="text" value={value} onChange={handleChange} />
+      </label>
+ 
+      <p>
+        <strong>Output:</strong> {value}
+      </p>
+    </div>
+  );
+};
+ 
+export default App;
+```
+
+### Destructuring assignment
+
+```js
+// Syntax
+
+let a, b, rest;
+[a, b] = [10, 20];
+console.log(a); // 10
+console.log(b); // 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+console.log(a); // 10
+console.log(b); // 20
+console.log(rest); // [30, 40, 50]
+
+({ a, b } = { a: 10, b: 20 });
+console.log(a); // 10
+console.log(b); // 20
+
+// Stage 4(finished) proposal
+({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+console.log(a); // 10
+console.log(b); // 20
+console.log(rest); // {c: 30, d: 40}
+```
