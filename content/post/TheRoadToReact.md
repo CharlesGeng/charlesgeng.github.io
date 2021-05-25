@@ -193,3 +193,8 @@ console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
 ```
+
+### Rest Operator vs Spread Operator
+
+- The **rest** parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
+- **Spread** syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
