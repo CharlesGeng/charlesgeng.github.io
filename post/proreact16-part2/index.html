@@ -1,6 +1,96 @@
-<!doctype html><html class=no-js lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>React Self Study - Charles Geng's Web</title><script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/favicon.ico></head><body class=body><div class="container container--outer"><header class=header><div class="container header__container"><div class=logo><a class=logo__link href=/ title="Charles Geng's Web" rel=home><div class="logo__item logo__text"><div class=logo__title>Charles Geng's Web</div></div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
-<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/post/><i class="fa fa-road"></i>
-<span class=menu__text>blog</span></a></li><li class=menu__item><a class=menu__link href=/about/about/><span class=menu__text>About Me</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>React Self Study</h1></header><div class="post__toc toc"><div class=toc__title>Page content</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#book-pro-react-16>Book <strong>Pro React 16</strong></a></li><li><a href=#todo-list>TODO LIST</a></li><li><a href=#chapter-09>Chapter 09</a></li><li><a href=#chapter-10>Chapter 10</a></li><li><a href=#chapter-11-stateful-component>Chapter 11 Stateful Component</a></li><li><a href=#chapter-12-working-with-events>Chapter 12 Working With Events</a></li><li><a href=#chapter-13-reconciliation-and-lifecycles>Chapter 13 Reconciliation and Lifecycles</a></li><li><a href=#chapter-14-composing-applications>Chapter 14 COMPOSING APPLICATIONS</a></li><li><a href=#chapter-15-forms-and-validation>Chapter 15 Forms and Validation</a></li></ul></nav></div></div><div class="content post__content clearfix"><h2 id=book-pro-react-16>Book <strong>Pro React 16</strong></h2><ul><li>ISBN: 978-1-4842-4450-0</li><li><a href=https://www.apress.com/gp/book/9781484244500>homepage</a></li></ul><h2 id=todo-list>TODO LIST</h2><ul><li><input disabled type=checkbox> TODO: Chapter 13. Know more about <strong>componentWillUnmount</strong>. How to close network connections, how to stop any asynchronous tasks.</li></ul><h2 id=chapter-09>Chapter 09</h2><ul><li>to be updated</li></ul><h2 id=chapter-10>Chapter 10</h2><ul><li>to be updated</li></ul><h2 id=chapter-11-stateful-component>Chapter 11 Stateful Component</h2><ul><li><strong>Stateful Component Definition</strong></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>React</span>, { <span style=color:#a6e22e>Component</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;react&#39;</span>
+<!doctype html><html class=no-js lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<title>React Self Study - Charles Geng's Web</title>
+<script>(function(a,b){a[b]=a[b].replace("no-js","js")})(document.documentElement,"className")</script>
+<meta name=description content>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=dns-prefetch href=//fonts.googleapis.com>
+<link rel=dns-prefetch href=//fonts.gstatic.com>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+<link rel=stylesheet href=/css/style.css>
+<link rel="shortcut icon" href=/favicon.ico>
+</head>
+<body class=body>
+<div class="container container--outer">
+<header class=header>
+<div class="container header__container">
+<div class=logo>
+<a class=logo__link href=/ title="Charles Geng's Web" rel=home>
+<div class="logo__item logo__text">
+<div class=logo__title>Charles Geng's Web</div>
+</div>
+</a>
+</div>
+<nav class=menu>
+<button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span>
+</button>
+<ul class=menu__list>
+<li class=menu__item>
+<a class=menu__link href=/post/>
+<i class="fa fa-road"></i>
+<span class=menu__text>blog</span>
+</a>
+</li>
+<li class=menu__item>
+<a class=menu__link href=/about/about/>
+<span class=menu__text>About Me</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="wrapper flex">
+<div class=primary>
+<main class=main role=main>
+<article class=post>
+<header class=post__header>
+<h1 class=post__title>React Self Study</h1>
+</header>
+<div class="post__toc toc">
+<div class=toc__title>Page content</div>
+<div class=toc__menu>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#book-pro-react-16>Book <strong>Pro React 16</strong></a></li>
+<li><a href=#todo-list>TODO LIST</a></li>
+<li><a href=#chapter-09>Chapter 09</a></li>
+<li><a href=#chapter-10>Chapter 10</a></li>
+<li><a href=#chapter-11-stateful-component>Chapter 11 Stateful Component</a></li>
+<li><a href=#chapter-12-working-with-events>Chapter 12 Working With Events</a></li>
+<li><a href=#chapter-13-reconciliation-and-lifecycles>Chapter 13 Reconciliation and Lifecycles</a></li>
+<li><a href=#chapter-14-composing-applications>Chapter 14 COMPOSING APPLICATIONS</a></li>
+<li><a href=#chapter-15-forms-and-validation>Chapter 15 Forms and Validation</a></li>
+</ul>
+</nav>
+</div>
+</div><div class="content post__content clearfix">
+<h2 id=book-pro-react-16>Book <strong>Pro React 16</strong></h2>
+<ul>
+<li>ISBN: 978-1-4842-4450-0</li>
+<li><a href=https://www.apress.com/gp/book/9781484244500>homepage</a></li>
+</ul>
+<h2 id=todo-list>TODO LIST</h2>
+<ul>
+<li><input disabled type=checkbox> TODO: Chapter 13. Know more about <strong>componentWillUnmount</strong>. How to close network connections, how to stop any asynchronous tasks.</li>
+</ul>
+<h2 id=chapter-09>Chapter 09</h2>
+<ul>
+<li>to be updated</li>
+</ul>
+<h2 id=chapter-10>Chapter 10</h2>
+<ul>
+<li>to be updated</li>
+</ul>
+<h2 id=chapter-11-stateful-component>Chapter 11 Stateful Component</h2>
+<ul>
+<li><strong>Stateful Component Definition</strong></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>React</span>, { <span style=color:#a6e22e>Component</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;react&#39;</span>
 
 <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>statefulComponent</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Component</span> {
   <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>props</span>) {
@@ -24,9 +114,50 @@
   }
 }
 
-</code></pre></div><ul><li>⚠️<strong>Avoiding the Dependent Value Pitfall</strong></li></ul><blockquote><p><strong>How to avoid</strong>: When you have a series of dependent changes to make, you can pass a function to the setState method that will be invoked when the state data has been updated and that can be used to perform tasks that rely on the changed state values(Page. 299)</p></blockquote><ul><li>⚠️<strong>Avoiding the Missing Updates Pitfall</strong></li></ul><blockquote><p>If you need to perform multiple updates and have each take effect in sequence, then you can use the version of the setState method that accepts a function as its first argument.(Page. 302)</p></blockquote><ul><li><strong>Defining Prop Types and Default Values</strong><ul><li>componentName.propTypes & componentName.defaultProps</li><li>static propTypes & static defaultProps</li></ul></li></ul><h2 id=chapter-12-working-with-events>Chapter 12 Working With Events</h2><ul><li><strong>Events</strong></li></ul><blockquote><p>Events are handled using properties that share the name of the corresponding DOM API property, expressed in camel case. The DOM API onclick property is expressed as onClick in React applications and specifies how to handle the click event, which is triggered when the user clicks an element.</p></blockquote><ul><li><p><strong>AVOIDING THE EVENT FUNCTION INVOCATION PITFALLS</strong></p></li><li><p>⚠️ The first <strong>mistake</strong> is to enclose the function you require in quotes rather than braces. This provides react with a string value instead of a function and produces an error in the browser’s Javascript console.</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;btn btn-primary&#34;</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;this.handleEvent&#34;</span> &gt;
-</code></pre></div><ul><li>⚠️ The other common mistake is to use an expression that invokes the function you require. This expression results in react invoking the handleEvent method when the component object is created and not when an event is triggered. You won’t receive an error or warning for this mistake, which makes the problem harder to spot.</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;btn btn-primary&#34;</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{ <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>handleEvent</span>() } &gt;
-</code></pre></div><ul><li><strong>Access Component Features</strong></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>/*******************
+</code></pre></div><ul>
+<li>⚠️<strong>Avoiding the Dependent Value Pitfall</strong></li>
+</ul>
+<blockquote>
+<p><strong>How to avoid</strong>: When you have a series of dependent changes to make, you can pass a function to the setState method that will be invoked when the state data has been updated and that can be used to perform tasks that rely on the changed state values(Page. 299)</p>
+</blockquote>
+<ul>
+<li>⚠️<strong>Avoiding the Missing Updates Pitfall</strong></li>
+</ul>
+<blockquote>
+<p>If you need to perform multiple updates and have each take effect in sequence, then you can use the version of the setState method that accepts a function as its first argument.(Page. 302)</p>
+</blockquote>
+<ul>
+<li><strong>Defining Prop Types and Default Values</strong>
+<ul>
+<li>componentName.propTypes & componentName.defaultProps</li>
+<li>static propTypes & static defaultProps</li>
+</ul>
+</li>
+</ul>
+<h2 id=chapter-12-working-with-events>Chapter 12 Working With Events</h2>
+<ul>
+<li><strong>Events</strong></li>
+</ul>
+<blockquote>
+<p>Events are handled using properties that share the name of the corresponding DOM API property, expressed in camel case. The DOM API onclick property is expressed as onClick in React applications and specifies how to handle the click event, which is triggered when the user clicks an element.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>AVOIDING THE EVENT FUNCTION INVOCATION PITFALLS</strong></p>
+</li>
+<li>
+<p>⚠️ The first <strong>mistake</strong> is to enclose the function you require in quotes rather than braces. This provides react with a string value instead of a function and produces an error in the browser’s Javascript console.</p>
+</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;btn btn-primary&#34;</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;this.handleEvent&#34;</span> &gt;
+</code></pre></div><ul>
+<li>⚠️ The other common mistake is to use an expression that invokes the function you require. This expression results in react invoking the handleEvent method when the component object is created and not when an event is triggered. You won’t receive an error or warning for this mistake, which makes the problem harder to spot.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;btn btn-primary&#34;</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{ <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>handleEvent</span>() } &gt;
+</code></pre></div><ul>
+<li><strong>Access Component Features</strong></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>/*******************
 </span><span style=color:#75715e>    1st Methord
 </span><span style=color:#75715e>********************/</span>
 <span style=color:#a6e22e>handleEvent</span> <span style=color:#f92672>=</span> () =&gt; {
@@ -52,11 +183,20 @@
 }
 ...
 <span style=color:#a6e22e>onClick</span> <span style=color:#f92672>=</span> {<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>handleEvent</span>}
-</code></pre></div><ul><li><strong>Avoiding the Event Reuse Pitfall</strong></li></ul><blockquote><p>React reuses SyntheticEvent objects and resets all the properties to null once an event has been handled. The <strong>persist</strong> method is used to prevent React from resetting the event object,</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>foo</span> <span style=color:#f92672>=</span> () =&gt; {
+</code></pre></div><ul>
+<li><strong>Avoiding the Event Reuse Pitfall</strong></li>
+</ul>
+<blockquote>
+<p>React reuses SyntheticEvent objects and resets all the properties to null once an event has been handled. The <strong>persist</strong> method is used to prevent React from resetting the event object,</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>foo</span> <span style=color:#f92672>=</span> () =&gt; {
   <span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>persist</span>()
   <span style=color:#75715e>// do something
 </span><span style=color:#75715e></span>}
-</code></pre></div><ul><li><strong>Invoking Event Handlers with a Custom Argument</strong></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>  <span style=color:#a6e22e>handleEvent</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>, <span style=color:#a6e22e>newTheme</span>) =&gt; {
+</code></pre></div><ul>
+<li><strong>Invoking Event Handlers with a Custom Argument</strong></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>  <span style=color:#a6e22e>handleEvent</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>, <span style=color:#a6e22e>newTheme</span>) =&gt; {
     <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>setState</span>({ <span style=color:#a6e22e>theme</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>newTheme</span> });
   }
 
@@ -67,33 +207,160 @@
     <span style=color:#a6e22e>Danger</span>
   &lt;/<span style=color:#f92672>button</span>&gt;
 
-</code></pre></div><ul><li><strong>Preventing Default Behavior</strong></li></ul><blockquote><p>Some events have behavior that the browser performs by default. The <strong>preventDefault</strong> method can be called on event objects to prevent the default behavior.</p></blockquote><ul><li><strong>Target Phase and Bubble Phase</strong></li></ul><blockquote><p>When an event is first triggered, it enters the target phase, where event handlers applied to the element that is the source of the event are invoked. Once those event handlers are complete, the event enters the bubble phase, where the event works its way up the chain of ancestor elements and is used to invoke any handlers that have been applied for that type of event.</p></blockquote><p><img src=/img/TargetPhaseAndBubblePhase.png alt="The target and bubble phases of the event"></p><ul><li><strong>Capture Phase</strong></li></ul><blockquote><p>The capture phase provides an opportunity for elements to process events before the target phase. During the capture phase, the browser starts with the body element and works its way down the hierarchy of elements toward the target, following the opposite path to the bubble phase, and gives each element the chance to process the event.</p></blockquote><p><img src=/img/CapturePhase.png alt="Capture Phase"></p><ul><li><strong>Stopping Event Propagation</strong></li></ul><blockquote><p>Understanding event phases can also be important if you want to disrupt the normal propagation sequence and prevent elements from receiving events.</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>stopPropagation</span>();
-</code></pre></div><h2 id=chapter-13-reconciliation-and-lifecycles>Chapter 13 Reconciliation and Lifecycles</h2><ul><li>Understanding the Update Process</li></ul><blockquote><p>When the application first starts, React asks all the components to render their content so that it can be displayed to the user. Once the content is displayed, the application is in the <strong>reconciled state</strong>, where the content displayed to the user is consistent with the state of the components.
-The <strong>setState</strong> method updates a component’s state data, but it also marks the component as <strong>stale</strong>, meaning that the HTML content displayed to the user may be out-of-date.</p></blockquote><ul><li>Understanding the Update Processing</li></ul><blockquote><p>Making changes to the HTML elements in the Domain Object Model is an expensive operation and so React compares the content returned by the components with the previous results so that it can ask the browser to perform the smallest number of operations, a process known as reconciliation.</p></blockquote><ul><li>How to manipulate an HTML Element in Chrome Console</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// IN COMPONENT definition, ADD ID PROPERTY
+</code></pre></div><ul>
+<li><strong>Preventing Default Behavior</strong></li>
+</ul>
+<blockquote>
+<p>Some events have behavior that the browser performs by default. The <strong>preventDefault</strong> method can be called on event objects to prevent the default behavior.</p>
+</blockquote>
+<ul>
+<li><strong>Target Phase and Bubble Phase</strong></li>
+</ul>
+<blockquote>
+<p>When an event is first triggered, it enters the target phase, where event handlers applied to the element that is the source of the event are invoked. Once those event handlers are complete, the event enters the bubble phase, where the event works its way up the chain of ancestor elements and is used to invoke any handlers that have been applied for that type of event.</p>
+</blockquote>
+<p><img src=/img/TargetPhaseAndBubblePhase.png alt="The target and bubble phases of the event"></p>
+<ul>
+<li><strong>Capture Phase</strong></li>
+</ul>
+<blockquote>
+<p>The capture phase provides an opportunity for elements to process events before the target phase. During the capture phase, the browser starts with the body element and works its way down the hierarchy of elements toward the target, following the opposite path to the bubble phase, and gives each element the chance to process the event.</p>
+</blockquote>
+<p><img src=/img/CapturePhase.png alt="Capture Phase"></p>
+<ul>
+<li><strong>Stopping Event Propagation</strong></li>
+</ul>
+<blockquote>
+<p>Understanding event phases can also be important if you want to disrupt the normal propagation sequence and prevent elements from receiving events.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>stopPropagation</span>();
+</code></pre></div><h2 id=chapter-13-reconciliation-and-lifecycles>Chapter 13 Reconciliation and Lifecycles</h2>
+<ul>
+<li>Understanding the Update Process</li>
+</ul>
+<blockquote>
+<p>When the application first starts, React asks all the components to render their content so that it can be displayed to the user. Once the content is displayed, the application is in the <strong>reconciled state</strong>, where the content displayed to the user is consistent with the state of the components.
+The <strong>setState</strong> method updates a component’s state data, but it also marks the component as <strong>stale</strong>, meaning that the HTML content displayed to the user may be out-of-date.</p>
+</blockquote>
+<ul>
+<li>Understanding the Update Processing</li>
+</ul>
+<blockquote>
+<p>Making changes to the HTML elements in the Domain Object Model is an expensive operation and so React compares the content returned by the components with the previous results so that it can ask the browser to perform the smallest number of operations, a process known as reconciliation.</p>
+</blockquote>
+<ul>
+<li>How to manipulate an HTML Element in Chrome Console</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// IN COMPONENT definition, ADD ID PROPERTY
 </span><span style=color:#75715e></span>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;messageDiv&#34;</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;h5 text-center p-2&#34;</span>&gt;
 
 <span style=color:#75715e>//In the chrome console run the command below. 
 </span><span style=color:#75715e>//Change the background color of the div element.
 </span><span style=color:#75715e></span>document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#e6db74>&#34;messageDiv&#34;</span>).<span style=color:#a6e22e>classList</span>.<span style=color:#a6e22e>add</span>(<span style=color:#e6db74>&#34;bg-info&#34;</span>)
-</code></pre></div><ul><li><p>To ensure that React is able to minimize the number of changes it has to make to display a change, elements generated from arrays are required to have a <strong>key</strong> prop, such as the one defined by the List component.</p></li><li><p>React provides the <strong>forceUpdate</strong> method, which can be used to explicitly trigger an update and ensures that any changes are reflected in the content presented to the user.</p></li><li><p>The process by which React creates a component and renders its content for the first time is called <strong>mounting</strong></p></li><li><p>React creates a new component object and goes through the mounting process, calling each of the methods in turn: <strong>constructor</strong>, <strong>render</strong>, and <strong>componentDidMount</strong>.</p></li><li><p>Update Phase: <strong>Render()</strong> -> <strong>componentDidUpdate()</strong>. After the component is mounted, the componentDidUpdate method will be called each time the component is updated.</p></li><li><p>When a component is about to be destroyed, React will call the <strong>componentWillUnmount</strong> method, which provides components with the opportunity to release resources, close network connections, and stop any asynchronous tasks.</p></li><li><p><strong>shouldComponentUpdate</strong>: This method allows a component to indicate that it does not need to be updated.</p></li><li><p>The arguments to the <strong>shouldComponentUpdate</strong> method are new props and state objects that can be inspected and compared to the existing values.</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>shouldComponentUpdate</span>(<span style=color:#a6e22e>newProps</span>, <span style=color:#a6e22e>newState</span>) {
+</code></pre></div><ul>
+<li>
+<p>To ensure that React is able to minimize the number of changes it has to make to display a change, elements generated from arrays are required to have a <strong>key</strong> prop, such as the one defined by the List component.</p>
+</li>
+<li>
+<p>React provides the <strong>forceUpdate</strong> method, which can be used to explicitly trigger an update and ensures that any changes are reflected in the content presented to the user.</p>
+</li>
+<li>
+<p>The process by which React creates a component and renders its content for the first time is called <strong>mounting</strong></p>
+</li>
+<li>
+<p>React creates a new component object and goes through the mounting process, calling each of the methods in turn: <strong>constructor</strong>, <strong>render</strong>, and <strong>componentDidMount</strong>.</p>
+</li>
+<li>
+<p>Update Phase: <strong>Render()</strong> -> <strong>componentDidUpdate()</strong>. After the component is mounted, the componentDidUpdate method will be called each time the component is updated.</p>
+</li>
+<li>
+<p>When a component is about to be destroyed, React will call the <strong>componentWillUnmount</strong> method, which provides components with the opportunity to release resources, close network connections, and stop any asynchronous tasks.</p>
+</li>
+<li>
+<p><strong>shouldComponentUpdate</strong>: This method allows a component to indicate that it does not need to be updated.</p>
+</li>
+<li>
+<p>The arguments to the <strong>shouldComponentUpdate</strong> method are new props and state objects that can be inspected and compared to the existing values.</p>
+</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>shouldComponentUpdate</span>(<span style=color:#a6e22e>newProps</span>, <span style=color:#a6e22e>newState</span>) {
   ...
   <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>result</span>;
 }
-</code></pre></div><ul><li><strong>getDerivedStateFromProps</strong>: This method allows a component to set its state data values based on the props it receives.</li></ul><blockquote><p>The <strong>getDerivedStateFromProps</strong> method is <strong>static</strong>, which means that it is unable to access any of the instance methods or properties via the <strong>this</strong> keyword. Instead, the method receives a props object, which contains the props values provided by the parent component, and a state object, which represents the current state data. The getDerivedStateFromProps method returns a new state data object that is derived from the prop data.</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>static</span> <span style=color:#a6e22e>shouldComponentUpdate</span>(<span style=color:#a6e22e>newProps</span>, <span style=color:#a6e22e>newState</span>) {
+</code></pre></div><ul>
+<li><strong>getDerivedStateFromProps</strong>: This method allows a component to set its state data values based on the props it receives.</li>
+</ul>
+<blockquote>
+<p>The <strong>getDerivedStateFromProps</strong> method is <strong>static</strong>, which means that it is unable to access any of the instance methods or properties via the <strong>this</strong> keyword. Instead, the method receives a props object, which contains the props values provided by the parent component, and a state object, which represents the current state data. The getDerivedStateFromProps method returns a new state data object that is derived from the prop data.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>static</span> <span style=color:#a6e22e>shouldComponentUpdate</span>(<span style=color:#a6e22e>newProps</span>, <span style=color:#a6e22e>newState</span>) {
   <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>state</span>
 }
-</code></pre></div><h2 id=chapter-14-composing-applications>Chapter 14 COMPOSING APPLICATIONS</h2><ul><li>Using the Children Prop</li></ul><blockquote><p>React provides a special <strong>children</strong> prop that is used when a component needs to display content provided by its parent but doesn’t know what that content will be in advance. This is a useful way of reducing duplication by standardizing features in a container that can be reused across an application.</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>render</span>(){
+</code></pre></div><h2 id=chapter-14-composing-applications>Chapter 14 COMPOSING APPLICATIONS</h2>
+<ul>
+<li>Using the Children Prop</li>
+</ul>
+<blockquote>
+<p>React provides a special <strong>children</strong> prop that is used when a component needs to display content provided by its parent but doesn’t know what that content will be in advance. This is a useful way of reducing duplication by standardizing features in a container that can be reused across an application.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>render</span>(){
   <span style=color:#66d9ef>return</span>
   &lt;<span style=color:#f92672>div</span>&gt;
   <span style=color:#75715e>// Container elements
 </span><span style=color:#75715e></span>  {<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>children</span>}<span style=color:#75715e>// Used to show children components
 </span><span style=color:#75715e></span>  &lt;/<span style=color:#f92672>div</span>&gt;
 }
-</code></pre></div><table><thead><tr><th style=text-align:left>Function</th><th style=text-align:left>Comment</th></tr></thead><tbody><tr><td style=text-align:left>React.Children.map</td><td style=text-align:left>This method invokes a function for each child and returns an array of the function results.</td></tr><tr><td style=text-align:left>React.Children.forEach</td><td style=text-align:left>This method invokes a function for each child without returning an array.</td></tr><tr><td style=text-align:left>React.Children.count</td><td style=text-align:left>This method returns the number of children.</td></tr><tr><td style=text-align:left>React.Children.only</td><td style=text-align:left>This method throws an array if the collection of children it receives contains more than one child.</td></tr><tr><td style=text-align:left>React.Children.toArray</td><td style=text-align:left>This method returns an array of children, which can be used to reorder or remove elements.</td></tr><tr><td style=text-align:left>React.cloneElement</td><td style=text-align:left>This method is used to duplicate a child element and allows new props to be added by the container.</td></tr></tbody></table><ul><li>Adding Props to Container Children</li></ul><blockquote><p>Use <strong>React.Children.map</strong> and <strong>React.cloneElement</strong></p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>modChildren</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>Children</span>.<span style=color:#a6e22e>map</span>(
+</code></pre></div><table>
+<thead>
+<tr>
+<th style=text-align:left>Function</th>
+<th style=text-align:left>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left>React.Children.map</td>
+<td style=text-align:left>This method invokes a function for each child and returns an array of the function results.</td>
+</tr>
+<tr>
+<td style=text-align:left>React.Children.forEach</td>
+<td style=text-align:left>This method invokes a function for each child without returning an array.</td>
+</tr>
+<tr>
+<td style=text-align:left>React.Children.count</td>
+<td style=text-align:left>This method returns the number of children.</td>
+</tr>
+<tr>
+<td style=text-align:left>React.Children.only</td>
+<td style=text-align:left>This method throws an array if the collection of children it receives contains more than one child.</td>
+</tr>
+<tr>
+<td style=text-align:left>React.Children.toArray</td>
+<td style=text-align:left>This method returns an array of children, which can be used to reorder or remove elements.</td>
+</tr>
+<tr>
+<td style=text-align:left>React.cloneElement</td>
+<td style=text-align:left>This method is used to duplicate a child element and allows new props to be added by the container.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Adding Props to Container Children</li>
+</ul>
+<blockquote>
+<p>Use <strong>React.Children.map</strong> and <strong>React.cloneElement</strong></p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>modChildren</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>Children</span>.<span style=color:#a6e22e>map</span>(
                     <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>children</span>, 
                     (<span style=color:#a6e22e>child</span> =&gt; <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>cloneElement</span>(<span style=color:#a6e22e>child</span>, 
                       {<span style=color:#a6e22e>newProp</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>val</span>})));
-</code></pre></div><ul><li>Createting a Specialized Component</li></ul><blockquote><p>Some components provide specialized versions of the features provided by another, more general, component. React relies on the specialized component rendering the more general component and managing its behavior with props.</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GeneralList</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Component</span>{
+</code></pre></div><ul>
+<li>Createting a Specialized Component</li>
+</ul>
+<blockquote>
+<p>Some components provide specialized versions of the features provided by another, more general, component. React relies on the specialized component rendering the more general component and managing its behavior with props.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GeneralList</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Component</span>{
   <span style=color:#75715e>//Show item of an array
 </span><span style=color:#75715e></span>}
 
@@ -110,12 +377,24 @@ The <strong>setState</strong> method updates a component’s state data, but it 
     &lt;/<span style=color:#f92672>div</span>&gt;
   }
 }
-</code></pre></div><ul><li>Creating Higher-Order Components</li></ul><blockquote><p><strong>Higher-order components (HOCs)</strong> provide an alternative to specialized components and are useful when components require common code but may not render related content. HOCs are often used for <strong><em>cross-cutting concerns</em></strong>, a term that refers to tasks that span the entire application and would otherwise lead to the same features being implemented in several places. Because HOCs are functions, you can define additional arguments to configure behavior.</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Foo</span>(<span style=color:#a6e22e>wrappedComponent</span>){
+</code></pre></div><ul>
+<li>Creating Higher-Order Components</li>
+</ul>
+<blockquote>
+<p><strong>Higher-order components (HOCs)</strong> provide an alternative to specialized components and are useful when components require common code but may not render related content. HOCs are often used for <strong><em>cross-cutting concerns</em></strong>, a term that refers to tasks that span the entire application and would otherwise lead to the same features being implemented in several places. Because HOCs are functions, you can define additional arguments to configure behavior.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Foo</span>(<span style=color:#a6e22e>wrappedComponent</span>){
   <span style=color:#66d9ef>return</span>(
     &lt;<span style=color:#f92672>NewComponent</span> /&gt;
   )
 }
-</code></pre></div><ul><li>Using Render props</li></ul><blockquote><p>A render prop is a function prop that provides a component with the content it should render, providing an alternative model of wrapping one component in another.</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>RenderProps</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Component</span> {
+</code></pre></div><ul>
+<li>Using Render props</li>
+</ul>
+<blockquote>
+<p>A render prop is a function prop that provides a component with the content it should render, providing an alternative model of wrapping one component in another.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>RenderProps</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Component</span> {
   <span style=color:#a6e22e>render</span>(){
     ...
     <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>render</span>()
@@ -134,31 +413,68 @@ The <strong>setState</strong> method updates a component’s state data, but it 
  
 }
 
-</code></pre></div><ul><li><p><strong>prop drilling</strong> or <strong>prop threading</strong>, where data values are passed through the component hierarchy to reach the point where they can be used.</p></li><li><p>Using Context For Global Data</p></li><li><p>Step 1: Define the Context</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>SomeContext</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createContext</span>({
+</code></pre></div><ul>
+<li>
+<p><strong>prop drilling</strong> or <strong>prop threading</strong>, where data values are passed through the component hierarchy to reach the point where they can be used.</p>
+</li>
+<li>
+<p>Using Context For Global Data</p>
+</li>
+<li>
+<p>Step 1: Define the Context</p>
+</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>SomeContext</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>createContext</span>({
   <span style=color:#a6e22e>prop1</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>prop2Value</span>,
   <span style=color:#a6e22e>prop2</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>prop2Value</span>,
   <span style=color:#a6e22e>func</span><span style=color:#f92672>:</span> () =&gt; {}
 });
-</code></pre></div><ul><li>Step 2: Context Consumer</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
+</code></pre></div><ul>
+<li>Step 2: Context Consumer</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
   <span style=color:#66d9ef>return</span> &lt;<span style=color:#f92672>SomeContext.Consumer</span>&gt;
   {<span style=color:#a6e22e>contextData</span> =&gt; 
     <span style=color:#75715e>//...context can be consumed here...
 </span><span style=color:#75715e></span>  }
   &lt;<span style=color:#f92672>SomeContext.Consumer</span>&gt;
 ...
-</code></pre></div><ul><li>Step 3: Context Provider</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>SomeContext.Provider</span> <span style=color:#a6e22e>value </span><span style=color:#f92672>=</span>{<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>SomeContextData</span>}&gt;
+</code></pre></div><ul>
+<li>Step 3: Context Provider</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>SomeContext.Provider</span> <span style=color:#a6e22e>value </span><span style=color:#f92672>=</span>{<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>SomeContextData</span>}&gt;
   <span style=color:#75715e>//Component that use the context
 </span><span style=color:#75715e></span>&lt;/<span style=color:#f92672>SomeContext.Provider</span>&gt;
 
-</code></pre></div><ul><li>Error Boundaries</li></ul><blockquote><p>The <strong>componentDidCatch</strong> method receives the error object thrown by the problem component and an additional information object that provides the component’s stack trace, which can be useful for logging.</p></blockquote><h2 id=chapter-15-forms-and-validation>Chapter 15 Forms and Validation</h2><ul><li>The <strong>Object.keys()</strong> method returns an array of a given object&rsquo;s own enumerable property <strong>names</strong>, iterated in the same order that a normal loop would.</li><li>The contents of the square brackets (the [ and ] characters) are evaluated to get the property name for the state update, which allows me to use the name property from the event.</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
+</code></pre></div><ul>
+<li>Error Boundaries</li>
+</ul>
+<blockquote>
+<p>The <strong>componentDidCatch</strong> method receives the error object thrown by the problem component and an additional information object that provides the component’s stack trace, which can be useful for logging.</p>
+</blockquote>
+<h2 id=chapter-15-forms-and-validation>Chapter 15 Forms and Validation</h2>
+<ul>
+<li>The <strong>Object.keys()</strong> method returns an array of a given object&rsquo;s own enumerable property <strong>names</strong>, iterated in the same order that a normal loop would.</li>
+<li>The contents of the square brackets (the [ and ] characters) are evaluated to get the property name for the state update, which allows me to use the name property from the event.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
 <span style=color:#a6e22e>updateFormValue</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>) =&gt; {
 <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>setState</span>({ [<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>name</span>]<span style=color:#f92672>:</span> <span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>value</span> },
 () =&gt; <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>submit</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>));
 }
 ...
-</code></pre></div><ul><li><p>Using <strong>select</strong> elements that present <strong>multiple items</strong></p><ul><li>Element defination:</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>select</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;form-control&#34;</span> <span style=color:#a6e22e>multiple</span><span style=color:#f92672>=</span>{<span style=color:#66d9ef>true</span>} <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;toppings&#34;</span>
+</code></pre></div><ul>
+<li>
+<p>Using <strong>select</strong> elements that present <strong>multiple items</strong></p>
+<ul>
+<li>Element defination:</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>&lt;<span style=color:#f92672>select</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;form-control&#34;</span> <span style=color:#a6e22e>multiple</span><span style=color:#f92672>=</span>{<span style=color:#66d9ef>true</span>} <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;toppings&#34;</span>
 <span style=color:#a6e22e>value</span><span style=color:#f92672>=</span>{ <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>toppings</span> } <span style=color:#a6e22e>onChange</span><span style=color:#f92672>=</span>{ <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>updateFormValueOptions</span> }&gt;
-</code></pre></div><ul><li>Event Handler:</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
+</code></pre></div><ul>
+<li>Event Handler:</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
 <span style=color:#a6e22e>updateFormValueOptions</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>) =&gt; {
 <span style=color:#75715e>&lt;!--</span> <span style=color:#a6e22e>Generate</span> <span style=color:#a6e22e>value</span> <span style=color:#a6e22e>list</span> <span style=color:#66d9ef>in</span> <span style=color:#a6e22e>array</span> <span style=color:#a6e22e>format</span> <span style=color:#f92672>--&gt;</span>
 <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>options</span> <span style=color:#f92672>=</span> [...<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>options</span>]
@@ -166,7 +482,12 @@ The <strong>setState</strong> method updates a component’s state data, but it 
 <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>setState</span>({ [<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>name</span>]<span style=color:#f92672>:</span> <span style=color:#a6e22e>options</span> },
 () =&gt; <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>.<span style=color:#a6e22e>submit</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>));}
 ...
-</code></pre></div></li><li><p>Using <strong>Radio</strong> Buttons. Radio buttons allow the user to select a single value from a list of options.</p></li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>  &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;form-group&#34;</span>&gt;
+</code></pre></div></li>
+<li>
+<p>Using <strong>Radio</strong> Buttons. Radio buttons allow the user to select a single value from a list of options.</p>
+</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>  &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;form-group&#34;</span>&gt;
     &lt;<span style=color:#f92672>label</span>&gt;<span style=color:#a6e22e>Ice</span> <span style=color:#a6e22e>Cream</span> <span style=color:#a6e22e>Flavors</span>&lt;/<span style=color:#f92672>label</span>&gt;
     { <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>flavors</span>.<span style=color:#a6e22e>map</span>(<span style=color:#a6e22e>flavor</span> =&gt;
     &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>className</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;form-check&#34;</span> <span style=color:#a6e22e>key</span><span style=color:#f92672>=</span>{ <span style=color:#a6e22e>flavor</span> }&gt;
@@ -181,12 +502,19 @@ The <strong>setState</strong> method updates a component’s state data, but it 
     &lt;/<span style=color:#f92672>div</span>&gt;
   )}
   &lt;/<span style=color:#f92672>div</span>&gt;
-</code></pre></div><ul><li>Using <strong>Checkbox</strong>. The <strong>checked</strong> property has been used to determine whether the user has checked or unchecked the element.</li><li>Using Checkboxes to Populate an Array:</li></ul><blockquote><p><strong>Array.prototype.splice()</strong>: The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// Syntax
+</code></pre></div><ul>
+<li>Using <strong>Checkbox</strong>. The <strong>checked</strong> property has been used to determine whether the user has checked or unchecked the element.</li>
+<li>Using Checkboxes to Populate an Array:</li>
+</ul>
+<blockquote>
+<p><strong>Array.prototype.splice()</strong>: The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// Syntax
 </span><span style=color:#75715e></span><span style=color:#a6e22e>splice</span>(<span style=color:#a6e22e>start</span>)
 <span style=color:#a6e22e>splice</span>(<span style=color:#a6e22e>start</span>, <span style=color:#a6e22e>deleteCount</span>)
 <span style=color:#a6e22e>splice</span>(<span style=color:#a6e22e>start</span>, <span style=color:#a6e22e>deleteCount</span>, <span style=color:#a6e22e>item1</span>)
 <span style=color:#a6e22e>splice</span>(<span style=color:#a6e22e>start</span>, <span style=color:#a6e22e>deleteCount</span>, <span style=color:#a6e22e>item1</span>, <span style=color:#a6e22e>item2</span>, <span style=color:#a6e22e>itemN</span>)
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx>...
 <span style=color:#a6e22e>handleCheckboxChange</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>) =&gt; {
     <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>checked</span>) {
       <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span>.<span style=color:#a6e22e>toppingC</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>target</span>.<span style=color:#a6e22e>value</span>)
@@ -211,5 +539,47 @@ The <strong>setState</strong> method updates a component’s state data, but it 
   )}
 &lt;/<span style=color:#f92672>div</span>&gt;
 ...
-</code></pre></div></div><footer class=post__footer><div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/react/ rel=tag>REACT</a></li><li class=tags__item><a class="tags__link btn" href=/tags/front-end/ rel=tag>FRONT-END</a></li></ul></div></footer></article></main><div class="authorbox clearfix"><div class=authorbox__header><span class=authorbox__name>About Charles Geng</span></div><div class=authorbox__description>This is not a technology blog only. 这不仅仅是一个技术博客。</div></div><section class=comments><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//charlesgeng-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></section></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__copyright>&copy; 2021 Charles Geng's Web.
-<span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span></div></div></footer></div><script async defer src=/js/menu.js></script></body></html>
+</code></pre></div>
+</div>
+<footer class=post__footer>
+<div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg>
+<ul class=tags__list>
+<li class=tags__item>
+<a class="tags__link btn" href=/tags/react/ rel=tag>REACT</a>
+</li>
+<li class=tags__item>
+<a class="tags__link btn" href=/tags/front-end/ rel=tag>FRONT-END</a>
+</li>
+</ul>
+</div>
+</footer>
+</article>
+</main>
+<div class="authorbox clearfix">
+<div class=authorbox__header>
+<span class=authorbox__name>About Charles Geng</span>
+</div>
+<div class=authorbox__description>
+This is not a technology blog only. 这不仅仅是一个技术博客。
+</div>
+</div>
+<section class=comments>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//charlesgeng-github-io.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</section>
+</div>
+</div>
+<footer class=footer>
+<div class="container footer__container flex">
+<div class=footer__copyright>
+&copy; 2021 Charles Geng's Web.
+<span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span>
+</div>
+</div>
+</footer>
+</div>
+<script async defer src=/js/menu.js></script>
+</body>
+</html>
